@@ -1,10 +1,7 @@
 fun main (){
-    val amount = 12500_00
-    val commission = 75
-    val minCommission = 3500
-
-    val sumCommission = (amount * commission) / 10000
-
-    if (sumCommission > minCommission) print("Commission: $sumCommission pennies") else print("Comission: $minCommission pennies")
-        //93_75
+    val amount = 1_000_000
+    val percentageCommission = 0.0075
+    val minAmountCommission = 3500
+    val amountCommission = if (amount * percentageCommission > minAmountCommission) amount * percentageCommission else minAmountCommission
+    println("Комиссия за перевод составит: $amountCommission копеек")
 }
